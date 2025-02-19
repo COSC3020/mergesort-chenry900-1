@@ -21,16 +21,16 @@ function merge(array, first, middle, end) {
      while (firstNum < middle && middleNum < end)
           {
                if(array[firstNum] <= array[middleNum])
-                    left++;
+                    firstNum++;
                else
                {
-                    temp = array[middle];
-                    for (var loop = middle; loop > left; loop--)
+                    temp = array[middleNum];
+                    for (var loop = middle; loop > firstNum; loop--)
                          array[loop] = array[loop - 1];
                
-                    array[left] = temp;
-                    left++;
-                    right++;
+                    array[firstNum] = temp;
+                    firstNum++;
+                    MiddleNum++;
                }
           }
      
