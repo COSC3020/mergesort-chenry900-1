@@ -1,6 +1,5 @@
 function mergesort(array) {
      var n = array.length;
-     var temp = new Array(n);
 
      for (f = 1; f < n; f *= 2) 
           {
@@ -8,29 +7,31 @@ function mergesort(array) {
                     {
                          var middle = Math.min(first + f, n);
                          var end = Math.min(first + 2 * f, n);
-                         merge(array, temp, first, middle, end);
+                         merge(array, first, middle, end);
                     }
           }
      
     return array;
 }
 
-function merge(array, temp, first, middle, end) {
+function merge(array, first, middle, end) {
      var firstNum = first;
      var middleNum = middle;
-     var tempNum = first;
+     var temp;
      while (firstNum < middle && middleNum < end)
           {
                if(array[firstNum] <= array[middleNum])
-                    temp[tempNum++] = array[firstNum++];
+                    left++;
                else
-                    temp[tempNum++] = array[middleNum++];
+               {
+                    temp = array[middle];
+                    for (var loop = middle; loop > left; loop--)
+                         array[loop] = array[loop - 1];
+               
+                    array[left] = temp;
+                    left++;
+                    right++;
+               }
           }
-     while (firstNum < middle)
-        temp[tempNum++] = array[firstNum++];
-     while (middleNum < end)
-          temp[tempNum++] = array[middleNum++];
-     for (i = first; i < end; i++)
-          array[i] = temp[i];
      
 }
