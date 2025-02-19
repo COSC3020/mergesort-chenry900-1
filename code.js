@@ -25,12 +25,11 @@ function merge(array, first, middle, end) {
                else
                {
                     temp = array[middleNum];
-                    for (var loop = middle; loop > firstNum; loop--)
+                    for (var loop = middleNum; loop > firstNum; loop--)
                          array[loop] = array[loop - 1];
                
                     array[firstNum] = temp;
                     firstNum++;
-                    MiddleNum++;
                }
           }
      
