@@ -30,6 +30,7 @@ function merge(array, first, middle, end) {
                
                     array[firstNum] = temp;
                     firstNum++;
+                    middleNum++;
                }
           }
      
