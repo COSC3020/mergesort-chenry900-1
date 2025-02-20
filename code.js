@@ -18,7 +18,7 @@ function merge(array, first, middle, end) {
      var firstNum = first;
      var middleNum = middle;
      var temp;
-     while (firstNum < middle && middleNum < end)
+     while (firstNum < middleNum && middleNum < end)
           {
                if(array[firstNum] <= array[middleNum])
                     firstNum++;
