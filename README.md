@@ -15,7 +15,7 @@ Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
-The outer loop for a standard mergesort function would run at O(n) because it doubles each run through until its over the limit. The inner loop runs at O(n) times. Finally the merge step runs O(logn^2) times as it needs to go through each element in the array. so the time complexity of an inplace mergesort is O(n^2logn^2).
+The outer loop doubles each time it goes through so it would run at O(logn) times. The inner loop would run at O(n) times. Finally the merge step would worst case run at O(n^2). This makes it O(n^2) + O(nlogn). So it runs at O(n^2).
 
 code copied from what i wrote last semester
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
